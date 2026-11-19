@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#4b1734">
+<title>For My Gorgeous Jeremiah ♡</title>
+<style>
+:root{--wine:#4b1734;--rose:#a84d75;--pink:#f3c9d9;--cream:#fff8f5;--ink:#402333}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:radial-gradient(circle at top,#fff0f5 0,#f7dce7 42%,#e9c0d0 100%);padding:28px 15px 45px}
+.wrap{max-width:760px;margin:auto}
+header{text-align:center;padding:25px 12px 20px}
+.eyebrow{letter-spacing:3px;text-transform:uppercase;font:11px Arial,sans-serif;color:#92506d}
+h1{font-size:clamp(32px,8vw,54px);font-weight:normal;margin:12px 0 8px;color:var(--wine)}
+.sub{font-size:15px;color:#80556a}
+.sparkle{font-size:22px;color:var(--rose)}
+.tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.tab{border:1px solid #d8a9bc;background:rgba(255,248,245,.78);border-radius:18px;padding:16px 12px;color:var(--wine);font:600 14px Arial,sans-serif;cursor:pointer;min-height:72px;box-shadow:0 5px 16px #6b234012;transition:.2s}
+.tab:hover,.tab.active{background:var(--wine);color:#fff4f7;transform:translateY(-2px);border-color:var(--wine)}
+.panel{display:none;background:rgba(255,250,248,.9);border:1px solid #e1b8c8;border-radius:22px;padding:22px;box-shadow:0 12px 30px #6b234018}
+.panel.show{display:block;animation:appear .25s ease}
+@keyframes appear{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.inner{display:block;margin:0 auto 18px;border:1px solid #c77e9d;background:#f9e4ec;color:var(--wine);border-radius:999px;padding:12px 22px;font:600 14px Arial,sans-serif;cursor:pointer}
+.inner:hover{background:#f1cad9}
+.letter{display:none;line-height:1.85;font-size:17px;white-space:pre-line;text-align:left;background:#fffdfb;border-left:3px solid #c77e9d;padding:18px 19px;border-radius:4px 14px 14px 4px}
+.letter.show{display:block}
+.letter p{margin:0}
+.poem{text-align:center;font-style:italic;font-size:19px;line-height:1.9}
+footer{text-align:center;margin:25px 0 0;color:#89576e;font-size:13px}
+@media(min-width:600px){.tabs{grid-template-columns:repeat(4,minmax(0,1fr))}.tab{font-size:13px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header>
+  <div class="sparkle">✧ ♡ ✧</div>
+  <div class="eyebrow">a little corner of the internet</div>
+  <h1>For My Gorgeous Jeremiah</h1>
+  <div class="sub">A few words, saved just for you.</div>
+</header>
+
+<nav class="tabs" aria-label="Website sections">
+  <button class="tab active" data-panel="one">What I Like About You</button>
+  <button class="tab" data-panel="two">Raffle Kid</button>
+  <button class="tab" data-panel="three">A Little Reminder</button>
+  <button class="tab" data-panel="four">Something for You</button>
+</nav>
+
+<section class="panel show" id="one">
+  <button class="inner" data-letter="letter-one">🧚‍♀️</button>
+  <div class="letter" id="letter-one"><p>Hi, my gorgeous baby.
+
+I have known you for sooo long, and I really love how comfortable we have become with each other. Deadass, you’re the only person who seems to know my flaws — and even my other not-so-flawless little flaws.
+
+All in all, I just love you. And yesss, sometimes you’re a little too mature, but I get to learn from you.
+
+Nakupenda. ♡</p></div>
+</section>
+
+<section class="panel" id="two">
+  <button class="inner" data-letter="letter-two">Swerrie, tap me</button>
+  <div class="letter" id="letter-two"><p>Look, honestly, I love how mature you can be sometimes, because I get to learn from my gorgeous, sweet baby.
+
+And yesss, you piss me off sometimes when you get mad about my stupidity, but anywhooo…
+
+You’re stuck with me, you know. ♡</p></div>
+</section>
+
+<section class="panel" id="three">
+  <button class="inner" data-letter="letter-three">Read this, Gorgeous</button>
+  <div class="letter" id="letter-three"><p>Hi there again! And yesss, I’m back, because why not?
+
+I just want to say: you are important, you are smart, you are kind, and you matter to Mutheu a lot.
+
+I may not talk to you all the time, but you’ve found a special place in my head, my heart, and my mouth — because sometimes I yap about you to my friends and in my journal.
+
+And yesss (this part is edited after the call we just had), yayyy! I loved how we spoke while you were in the toilet. 😭
+
+By the way, I literally feel like myself when I talk to you. ♡</p></div>
+</section>
+
+<section class="panel" id="four">
+  <button class="inner" data-letter="letter-four">Press me, Gorgeous</button>
+  <div class="letter poem" id="letter-four"><p>You are my sunshine on the quietest days,
+A little warmth in a thousand ways.
+I missed you like stars miss the morning sun,
+And somehow, with you, the day feels done.
+
+You are a wish I’m grateful came true,
+A lovely part of the world I found in you.
+My gorgeous Jeremiah, this much is true:
+You mean more to me than words can do. ♡</p></div>
+</section>
+<footer>Made with love, just for you. ♡</footer>
+</main>
+<script>
+const tabs=[...document.querySelectorAll('.tab')];
+const panels=[...document.querySelectorAll('.panel')];
+tabs.forEach(tab=>tab.addEventListener('click',()=>{
+  tabs.forEach(t=>t.classList.toggle('active',t===tab));
+  panels.forEach(p=>p.classList.toggle('show',p.id===tab.dataset.panel));
+}));
+document.querySelectorAll('.inner').forEach(button=>button.addEventListener('click',()=>{
+  const letter=document.getElementById(button.dataset.letter);
+  letter.classList.toggle('show');
+  button.setAttribute('aria-expanded',letter.classList.contains('show')?'true':'false');
+}));
+</script>
+</body>
+</html>
